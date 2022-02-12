@@ -1,0 +1,73 @@
+@import '../var.scss';
+.header { 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 88px;
+    width: auto;
+    background-color: $aside__bg__color;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom:1px solid #D9FFF5;
+    @media screen and (min-width: 768px) and (max-width:1439px) {
+        padding: 0 24px;
+    }
+    @media screen and (min-width:1440px) {
+        display: none; 
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0px;
+        @media screen and (min-width: 768px) and (max-width:1439px) {
+            margin: 0;
+        }
+        &--right{
+            margin-left: auto;
+            width: 96px;
+            @media screen and (min-width: 768px) and (max-width:1439px) {      
+                margin-left: 0; 
+            }
+        }
+        &--contacts {
+            width: 152px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 40px;
+            @media screen and (max-width:767px) {
+                display: none;
+            }
+        }
+    }
+   
+    &__divider {
+        background-image: url('../img/divider.svg');
+        width: 2px;
+        height: 32px;
+        margin: 0 20px;
+        &--hidden {
+            @media screen and (max-width:767px) {
+                display: none;
+            }
+        }
+    }
+    &__button--divider {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/divider.svg');
+            width: 2px;
+            height: 32px;
+            left: -16px;
+        }
+    }
+    &__logo {
+        @media screen and (max-width:767px) {
+            margin-left: 16px;
+        }
+    }
+}

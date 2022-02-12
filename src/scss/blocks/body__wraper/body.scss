@@ -1,0 +1,65 @@
+@import "../body__wraper/var.scss";
+
+@font-face {
+  font-family: "TTLakes__regular";
+  src: url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "TTlakes__medium";
+  src: url("../fonts/TTLakes-Medium.ttf");
+}
+@font-face {
+  font-family: "TTLakes__bold";
+  src: url("../fonts/TTLakes-Bold.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+body {
+  font-family: TTLakes__regular;
+  font-size: 24px;
+  background-color: $body__bg__color;
+}
+button {
+  cursor: pointer;
+}
+.body__wrapper {
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    margin-left: 321px;
+  }
+}
+.button {
+  width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: $btn__color;
+  border: none;
+  outline: none;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 1px 1px 10px blueviolet;
+    transition: 0.3s;
+    opacity: 0.9;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  &--exit:hover {
+    transform: scale(1.2) rotate(90deg);
+  }
+}

@@ -1,0 +1,48 @@
+@import '../var.scss';
+.footer {
+    height: auto;
+    width:auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: TTlakes__medium;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color:$footer__text__color;
+    border-top:1px solid #D9FFF5;
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+    }
+    &__block {
+        
+        font-family: TTlakes__medium;
+        width: auto;
+        padding-bottom: 16px;
+        @media screen and (min-width:768px) {
+            width: 33.3333333%;
+        }
+        &--developer {
+            @media screen and (min-width:768px) {
+                text-align: left;
+            }
+        }
+        &--offer { 
+            @media screen and (min-width:768px) {
+                margin-left: auto;
+                text-align: right;
+            }
+        }
+    }
+    & a{
+        text-decoration: none;
+        color: unset;
+        &:hover{
+            text-decoration: underline;
+            color: unset;
+        }
+    }
+
+}

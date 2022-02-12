@@ -1,0 +1,107 @@
+@import "../var.scss";
+.ahead {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background: linear-gradient(to right, #f2f2f2, #ffffff);
+  margin-top: 24px;
+  border-top: 1px solid #d9fff5;
+  @media screen and (min-width: 768px) {
+    height: 56px;
+  }
+  &__text {
+    font-family: TTlakes__regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $ahead__text__color;
+    padding: 0 16px;
+    margin: auto 0;
+    @media screen and (min-width: 768px) {
+      padding: 16px 24px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding: 16px 32px;
+    }
+  }
+}
+.swiper-container {
+  overflow: hidden;
+}
+.swiper-slide {
+  margin-bottom: 16px;
+  background-color: $swiper-slide__bg__color;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+.slide-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $btn__color;
+  outline: none;
+  background-color: unset;
+  background-image: url("../img/button_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 46%;
+  // cursor: pointer;
+}
+.read-more {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  &__btn {
+    position: relative;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    width: 101px;
+    margin-left: 56px;
+    text-align: left;
+    background-color: $read-more__btn__color;
+    font-family: TTlakes__regular;
+    letter-spacing: -0.2px;
+    &--close::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 40px;
+      left: -18px;
+      top: 6px;
+    }
+    &--open::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/arrow.svg");
+      transform: rotate(180deg);
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 40px;
+      left: -24px;
+      top: -24px;
+    }
+  }
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+  margin: 0 auto;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $pagination-bullet__bg__color;
+  margin: 0 6px;
+  &:focus {
+    background-color: $pagination-bullet__hover__bg__color;
+  }
+}

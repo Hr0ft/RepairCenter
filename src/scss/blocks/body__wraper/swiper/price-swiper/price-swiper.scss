@@ -1,0 +1,190 @@
+@import '../../var.scss';
+.price-swiper {
+   
+    & .swiper-container {
+        padding-left: 8px;
+        @media screen and (min-width:768px) {
+            padding: 0 24px;
+        }
+        @media screen and (min-width:1440px) {
+            padding: 0 32px;
+        }
+    }
+    & .swiper-wrapper {
+        display: flex;
+        padding-top: 16px;
+        @media screen and (min-width:768px) {
+            width: 100%;
+            display: table;
+            border-collapse: collapse;
+            position: relative; 
+        }
+    } 
+    &__slide {
+        position: relative;
+        min-width: 260px;
+        max-width: 260px;
+        min-height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        letter-spacing: -0.2px;
+        font-family: TTLakes__regular;
+        // border: 1px solid pink;
+        @media screen and (min-width:768px) {
+            margin: 0 16px;
+            min-height:72px;
+            display: table-row;
+            margin-left: 0;
+            padding-right: 16px;
+            border-radius: 0px;
+        }
+        @media screen and (min-width:768px) {
+            // height: 100px;
+        }
+        &:nth-child(2) {
+            @media screen and (min-width:768px) {
+            border-radius: 6px 6px 0 0;
+            }
+        } 
+        &:last-child{
+            @media screen and (min-width:768px) {
+                border-radius: 0 0 6px 6px;
+            } 
+        }
+        &:not(:last-child):after {
+            @media screen and (min-width:768px) {
+            position: absolute;
+            content: '';
+            border-bottom: 2px solid #EAEAEA;
+            width: 95%;
+            left: 16px;
+            top: 71px;
+            z-index: 5;
+            }
+        }      
+    } 
+    &__legend {
+        width: 100%;
+        font-size: 14px;
+        line-height: 16px;
+        color:$price-swiper__legend__color;
+        padding-left: 16px;
+        margin-top: auto;
+        @media screen and (min-width:768px) {
+            display: none;
+        } 
+    }
+    &__value {
+        width: 100%;
+        font-size: 16px;
+        line-height: 18px;
+        color: $price-swiper__color;
+        padding: 0 16px;
+        @media screen and (min-width:768px) {
+            width: auto;
+            height: 72px;
+            display: table-cell;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+        @media screen and (min-width:1440px) {
+            padding: 0 24px;
+        }
+        &--price {
+            @media screen and (min-width:768px) {
+                text-align: end;
+            } 
+        }
+        &--time {
+            @media screen and (min-width:768px) {
+                text-align: end;
+            } 
+        }
+    }
+}
+
+.order {
+    @media screen and (min-width:768px) {
+        text-align: end;
+        position: relative;
+    }
+}
+.order-button {
+    position: absolute;
+    width: 119px;
+    height: 32px;
+    bottom: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 16px;
+    right: 16px;
+    background-color: $order-button__bg__color;
+    background-image: url('../img/whiteArrow.svg');
+    background-position: 88% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    @media screen and (min-width:768px) {
+        display: table-cell;
+        position: relative;
+        height: 32px;
+        top: 16px
+    }
+}
+.offer {
+    padding: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (min-width:768px) {
+        width: 55%;
+    }
+    &__nds {
+        font-family: TTLakes__regular;
+        color: $price-swiper__color;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        vertical-align: top;
+    }
+    &__btn {
+        width:auto;
+        outline: 0;
+        border:0;
+        background-color: $price-swiper__btn__bg__color;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        @media screen and (min-width:768px) {
+            max-width: auto;
+        }
+        & span {
+            // width:auto;
+            font-family: TTLakes__medium;
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+    &__arrow {
+        width: 10px;
+        height: 10px;
+        background-image: url('../img/pinkArrow.svg');
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        margin-left: 12px;
+    }
+}
+.price__mobile{
+    @media screen and (min-width: 768px) {
+        display: table-row;
+        padding: 16px;
+        margin: 0;
+    }
+    &--hidden {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}
